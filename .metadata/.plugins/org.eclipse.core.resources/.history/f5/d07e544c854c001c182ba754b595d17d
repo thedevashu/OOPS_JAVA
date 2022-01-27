@@ -1,0 +1,11 @@
+package study.thread.bankexample;
+
+public class WithdrawThread implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

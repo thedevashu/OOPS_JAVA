@@ -1,0 +1,11 @@
+package study.practice.daemonthread;
+
+public class TimeWatcher implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

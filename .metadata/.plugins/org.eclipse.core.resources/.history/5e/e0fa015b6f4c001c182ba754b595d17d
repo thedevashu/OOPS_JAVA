@@ -1,0 +1,17 @@
+package study.practice;
+
+public class MyDate {
+	private int day,month,year;
+	public MyDate(int dy,int mnt,int yr) {
+		day =dy;
+		month=mnt;
+		year=yr;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return day+"/"+month+"/"+year;
+	}
+	
+}

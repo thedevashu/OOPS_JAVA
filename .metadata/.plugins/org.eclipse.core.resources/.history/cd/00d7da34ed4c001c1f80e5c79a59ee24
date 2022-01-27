@@ -1,0 +1,13 @@
+package study.thread.bankexample;
+
+public class User {
+	public static void main(String[] args) {
+		Account ac =new Account();
+		Thread deposite=new Thread(new DepositeThread(ac));
+		Thread withdraw =new Thread(new WithdrawThread(ac));
+		deposite.start();
+		withdraw.start();
+		
+	}//main ends
+
+}

@@ -1,0 +1,25 @@
+package study.javaIO;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.List;
+
+public class StudentIOOperation {
+	public static void writeFile(List<Student> students) {
+		
+		
+		try {
+			//Makin file Output stream to write on HDD
+			FileOutputStream fwrite =new FileOutputStream("P:\\IET_DAC\\javaoop\\assignment_4\\src\\study\\javaIO\\studentDB");
+			
+			//save input list in serialize form
+			ObjectOutputStream oWrite =new ObjectOutputStream(fwrite);
+			oWrite.writeObject(students);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

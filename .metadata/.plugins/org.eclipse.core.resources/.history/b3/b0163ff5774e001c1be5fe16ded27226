@@ -1,0 +1,14 @@
+package study.practice;
+
+public class ProductMain2 {
+
+	public static void main(String[] args) {
+		ProductMain.serializeArr();
+		Product []prr =ProductDeserialize.deserializeProduct();
+		
+		for(Product s :prr) {
+			System.out.println(s);
+		}
+	}
+
+}

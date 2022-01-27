@@ -1,0 +1,20 @@
+package study.io;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class DeserializeBook {
+
+	public static void main(String[] args) throws IOException {
+		//Creating intput stream to read books.bingo object file to read
+		FileInputStream fread = new FileInputStream("P:\\books.bingo");
+		
+		ObjectInputStream OIS =new ObjectInputStream(fread);
+		
+		System.out.println(OIS);
+
+	}
+
+}

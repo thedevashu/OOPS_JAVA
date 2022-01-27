@@ -1,0 +1,43 @@
+package study.practice.daemonthread;
+
+import java.util.Date;
+
+public class DaemonThreadExample {
+
+	public static void main(String[] args) {
+		//nonserivec class
+		Runnable th1 =new Runnable() {
+			
+			@Override
+			public void run() {
+				int i=0;
+				while(i++<10) {
+					System.out.println("Tell me time");
+					try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				
+			}
+		};
+		
+		//service class
+		
+		Runnable th2 =new Runnable() {
+			
+			@Override
+			public void run() {
+				while(true) {
+					Date d =new Date();
+					System.out.println(d.toGMTString());
+				}
+				
+			}
+		};
+
+	}
+
+}

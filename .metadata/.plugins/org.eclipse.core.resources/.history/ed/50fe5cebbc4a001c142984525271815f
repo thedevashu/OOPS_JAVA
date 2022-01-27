@@ -1,0 +1,41 @@
+package study.collection;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class LoginMashMap {
+
+	public static void main(String[] args) {
+		
+		HashMap<String, String> uid =new HashMap<>();
+		uid.put("pass1", "User1");
+		uid.put("pass2", "User2");
+		uid.put("pass3", "User3");
+		uid.put("pass4", "User4");
+		
+		System.out.println(uid);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter User Name");
+		
+		if(!uid.containsValue(sc.next())) {
+			System.out.println("Wrong User");
+		}
+		
+		System.out.println("Enter Password!");
+		if(!uid.containsKey(sc.next())) {
+			System.out.println("Wrong Password");
+		}
+		
+		
+//		HashSet<String> loginDetail =new HashSet<>();
+//		loginDetail.add("name1");
+//		loginDetail.add("name12");
+//		loginDetail.add("name13");
+//		loginDetail.add("name15");
+//		System.out.println(loginDetail);
+		
+
+	}
+
+}

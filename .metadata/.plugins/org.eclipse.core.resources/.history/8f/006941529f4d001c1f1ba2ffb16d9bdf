@@ -1,0 +1,25 @@
+package study.shrinivas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int []mark1 = {20,19,18,23};
+		Student std1 =new Student("ABC"	,29,mark1 );
+		int []mark2 = {20,19,18,23};
+		Student std2 =new Student("ABC"	,29,mark2 );
+		int []mark3 = {20,19,18,23};
+		Student std3 =new Student("ABC"	,29,mark3 );
+		List<Student> stdList =new ArrayList<>();
+		stdList.add(std1);
+		stdList.add(std2);
+		stdList.add(std3);
+		//writing to file
+		StudentIOOperation.writeToFile(stdList);
+		List<Student> std=StudentIOOperation.readFile();
+		System.out.println(std);
+	}
+
+}

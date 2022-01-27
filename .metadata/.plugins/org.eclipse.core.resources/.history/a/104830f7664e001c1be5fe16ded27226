@@ -1,0 +1,12 @@
+package study.practice.inheretance;
+
+public abstract class Employee extends Person {
+	private int empid;
+	private long bankAcNumber;
+	private String role;
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

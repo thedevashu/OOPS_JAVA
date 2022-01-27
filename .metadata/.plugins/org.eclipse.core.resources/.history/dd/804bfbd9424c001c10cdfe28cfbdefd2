@@ -1,0 +1,30 @@
+package study.runnable;
+
+public class DaemonExample {
+
+}
+class CompanyNeedChai implements Runnable{
+
+	@Override
+	public void run() {
+		int i=0;
+		while(i++ <10) {
+			System.out.println("WE consume chai");
+		}
+		System.out.println("We Dont need chai now");
+		
+	}
+	
+}
+
+class TapriWala implements Runnable{
+
+	@Override
+	public void run() {
+		while(true) {
+			System.out.println("I GIVE CHAI UNTIL U ARE WORKING");
+		}
+		
+	}
+	
+}

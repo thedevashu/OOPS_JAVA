@@ -1,0 +1,26 @@
+package study.thread.bankexample;
+
+public class User {
+	public static void main(String[] args) {
+		Account ac =new Account();
+		Thread deposite=new Thread(new DepositeThread(ac));
+		Thread withdraw =new Thread(
+			()->{
+				for (int i = 0; i < 10; i++) {
+					ac.withdraw(100);
+					System.out.println(ac);
+					try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		);
+		deposite.start();
+		withdraw.start();
+		
+	}//main ends
+
+}

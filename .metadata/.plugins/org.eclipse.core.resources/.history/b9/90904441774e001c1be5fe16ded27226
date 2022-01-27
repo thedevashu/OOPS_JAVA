@@ -1,0 +1,27 @@
+package study.practice;
+import java.io.*;
+
+
+public class ProductDeserialize {
+	
+	public static Product[] deserializeProduct() {
+		//make input stream to read file from hdd
+		FileInputStream fread=null;
+		
+		//deserializing object file
+		
+		ObjectInputStream oin =null;
+		
+		fread=new FileInputStream("P://products.obj");
+		
+		oin =new ObjectInputStream(fread);
+		
+		Object obj =oin.readObject();//taking object file reference in obj
+		
+		return (Product[])obj;
+		
+		
+		
+		
+
+}

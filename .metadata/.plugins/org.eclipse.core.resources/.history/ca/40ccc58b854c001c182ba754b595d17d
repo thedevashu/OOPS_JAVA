@@ -1,0 +1,19 @@
+package study.thread.bankexample;
+
+public class Account {
+	private int balance;
+	public Account() {
+		balance =10000;
+	}
+	public void deposite(int dep) {
+		 balance+=dep;
+	}
+	public void withdraw(int balance) {
+		this.balance -= balance;
+	}
+	
+	public String toString() {
+		return balance+"";
+	}
+
+}

@@ -1,0 +1,18 @@
+package study.collection;
+
+import java.util.HashSet;
+
+public class LoginMashMap {
+
+	public static void main(String[] args) {
+		HashSet<String> loginDetail =new HashSet<>();
+		loginDetail.add("name1");
+		loginDetail.add("name12");
+		loginDetail.add("name13");
+		loginDetail.add("name15");
+		System.out.println(loginDetail);
+		
+
+	}
+
+}

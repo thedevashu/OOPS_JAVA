@@ -1,0 +1,18 @@
+package study.thread;
+
+public class ThreadExample extends Thread {
+
+	
+	public static void main(String[] args) {
+		Thread th = new ThreadExample();
+		Thread th2 = new ThreadExample();
+		th.start();
+		th2.start();
+	}
+	
+	@Override
+	public void run() {
+		while(true)
+			System.out.println("hi");
+	}
+}

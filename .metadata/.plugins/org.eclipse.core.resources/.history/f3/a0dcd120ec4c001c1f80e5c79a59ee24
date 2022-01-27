@@ -1,0 +1,31 @@
+package study.thread.bankexample;
+
+
+
+public class Account {
+	private int balance;
+	private final int MAX_BAL=15000;
+	private final int MIN_BAL=500;
+	public Account() {
+		balance =10000;
+	}
+	public synchronized void deposite(int dep) {
+		if(balance+dep > MAX_BAL) {
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		balance+=dep;
+	}
+	public synchronized  void withdraw(int balance) {
+		this.balance -= balance;
+	}
+	
+	public String toString() {
+		return balance+"";
+	}
+
+}

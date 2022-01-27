@@ -1,0 +1,44 @@
+package study.lamdaexpressions;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
+
+public class StreamExample {
+
+	public static void main(String[] args) {
+		List<Integer> aList = Arrays.asList(12,22,13,5,76,8,19,15,34);
+		Stream<Integer> stm =aList.stream();
+		MyPredicate obj =new MyPredicate();
+		stm.filter(obj);
+		
+//		stm.forEach(new MyForEach());
+
+	}//end of main method
+
+}//end StreamExample class
+class MyForEach implements Consumer<Integer>{
+
+	@Override
+	public void accept(Integer t) {
+		System.out.println(t);
+		
+	}
+	
+}
+
+class MyPredicate implements Predicate<Integer>{
+
+	@Override
+	public boolean test(Integer t) {
+		
+		if(t >=20) {
+			return true;
+		}
+		return false;
+		
+	}//end of test
+	
+}//end of MyPred class

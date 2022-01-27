@@ -1,0 +1,17 @@
+package study.thread.bankexample;
+
+public class DepositeThread implements Runnable {
+	Account a;
+	public void run() {
+		int i=0;
+		while(i++<10) {
+			a.deposite(1000);
+			System.out.println(a);
+		}
+	}
+	public DepositeThread(Account a) {
+		this.a=a;
+	}
+	
+
+}

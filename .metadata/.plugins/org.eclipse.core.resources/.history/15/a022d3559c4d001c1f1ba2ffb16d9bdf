@@ -1,0 +1,30 @@
+package study.shrinivas;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.util.List;
+
+public class StudentIOOperation {
+
+	//filename studen.db
+	public static void writeToFile(List<Student> students) {
+		
+		try {
+			//creating outputstream to write on hdd
+			FileOutputStream fwrite =new FileOutputStream("P:\\student\\student.db");
+			//creating object output stream to write serialize date from student list 
+			ObjectOutputStream owrite = new ObjectOutputStream(fwrite);
+			owrite.writeObject(students);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public static List<Student> readFile(){
+		return null;
+		
+	}
+}

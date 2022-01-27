@@ -1,0 +1,7 @@
+package study.shrinivas;
+
+public class FileNotFountException extends Exception {
+	public FileNotFountException() {
+		System.out.println("StudentDbFileNotFound");
+	}
+}

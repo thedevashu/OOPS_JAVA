@@ -1,0 +1,32 @@
+package study.overriding;
+
+import product.hasrelation.MyDate;
+import study.hasrelation.Circle;
+import study.hasrelation.Point;
+
+public class OverridingEqual {
+	public static void main(String[] args) {
+		MyDate d= new MyDate(1, 1, 2001);
+		MyDate d1 =new MyDate(1,1,2101);
+		checkEqaulity(d,d1);
+		
+		Point p1 =new Point(21, 31);
+		Point p2 =new Point(21, 31);
+		checkEqaulity(p1, p2);
+		
+		Circle c1 =new Circle(112, p1);
+		Circle c2 =new Circle(12, p2);
+		checkEqaulity(c1, c2);
+	}
+
+	private static void checkEqaulity(Object obj1, Object obj2) {
+		if(obj1.toString().equals(obj2.toString())) {
+			System.out.println(obj1+"Same"+obj2);
+		}
+		else {
+			System.out.println(obj1+"Not Same"+obj2);
+		}
+		
+	}
+
+}

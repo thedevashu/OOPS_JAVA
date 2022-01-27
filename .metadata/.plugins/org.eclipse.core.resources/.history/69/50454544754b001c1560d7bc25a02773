@@ -1,0 +1,28 @@
+package study.io;
+
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class FileHandling {
+
+	public static void main(String[] args) throws IOException {
+		
+		FileOutputStream f =new FileOutputStream("P:\\abc.txt");
+		
+		PrintWriter pw =new PrintWriter(f,true);
+		Scanner sc =new Scanner(System.in);
+		while(true) {
+			System.out.println("ENter city name");
+			String str =sc.nextLine();
+			if(str.equalsIgnoreCase("quit"))	break;
+			pw.write(str+"\n");
+		}
+		pw.flush();
+		pw.close();
+
+	}
+
+}

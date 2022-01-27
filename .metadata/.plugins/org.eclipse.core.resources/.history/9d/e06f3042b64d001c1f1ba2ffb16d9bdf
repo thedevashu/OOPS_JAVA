@@ -1,0 +1,58 @@
+package study.javaIO;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student std=new Student();;
+		List<Student> stdList= new ArrayList<Student>();
+		Scanner scn =new Scanner(System.in);
+		menu(std,stdList,scn);
+
+	}
+
+	private static void menu(Student std, List<Student> stdList, Scanner scn) {
+		while(true) {
+			System.out.println("1. Add Student with marks");
+			System.out.println("2. Add Student without marks");
+			System.out.println("3. Search Student by name");
+			System.out.println("4. Remove  Student");
+			System.out.println("5. Remove all Student");
+			System.out.println("6. Exit without save");
+			System.out.println("7. Exit with save");
+			
+			System.out.println("Enter your choice");
+			int key=scn.nextInt();
+			
+			switch (key) {
+			case 1:{
+				addStudent(std,stdList,scn);
+				break;
+			}
+				
+			case 2:{
+				addStudent(std,stdList,scn);
+				break;
+			}
+			case 3:{
+				System.out.println("Enter name of student");
+				searchStudent(scn.next(),stdList);
+				break;
+			}
+			case 3:{
+				System.out.println("Enter index of student");
+				searchStudent(scn.nextInt(),stdList);
+				break;
+			}
+
+			default:
+				break;
+			}
+		}
+		
+	}
+
+}

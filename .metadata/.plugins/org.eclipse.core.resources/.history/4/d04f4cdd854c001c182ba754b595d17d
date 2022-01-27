@@ -1,0 +1,21 @@
+package study.thread.bankexample;
+
+import javax.swing.plaf.synth.SynthColorChooserUI;
+
+public class Account {
+	private int balance;
+	public Account() {
+		balance =10000;
+	}
+	public synchronized void deposite(int dep) {
+		 balance+=dep;
+	}
+	public  void withdraw(int balance) {
+		this.balance -= balance;
+	}
+	
+	public String toString() {
+		return balance+"";
+	}
+
+}

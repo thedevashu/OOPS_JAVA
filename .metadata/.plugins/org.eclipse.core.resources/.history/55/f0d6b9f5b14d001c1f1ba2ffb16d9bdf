@@ -1,0 +1,48 @@
+package study.javaIO;
+
+public class Student {
+
+	private String name;
+	private int age;
+	private int[] marks;
+	
+	public Student() {
+		name=null;
+		age=0;
+		marks=null;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int[] getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int[] marks) {
+		this.marks = marks;
+	}
+
+	public void setName(String name) {
+		this.name =name;
+	}
+	public String getName() {
+		return this.name;
+	}
+	/**
+	 * @param name
+	 * @param age
+	 * @param marks
+	 */
+	public Student(String name, int age, int[] marks) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.marks = marks;
+	}
+}

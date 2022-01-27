@@ -1,0 +1,20 @@
+package study.practice;
+
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+
+public class MonthlyExpense {
+	private ArrayList<ExpenseDetails> arrList;
+	public MonthlyExpense() {
+		this.arrList =new ArrayList<>();
+	}//end MonthlyExpense constructor
+
+	private void addNewExpens(ExpenseDetails e) {
+		GregorianCalendar g =new GregorianCalendar();
+		
+		if(e.getExpenseDate().getMonth() == g.MONTH) {
+			arrList.add(e);
+		}
+	}//end addNewExpense
+
+}//end class

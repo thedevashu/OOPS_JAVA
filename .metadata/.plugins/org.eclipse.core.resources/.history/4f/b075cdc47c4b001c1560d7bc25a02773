@@ -1,0 +1,10 @@
+package study.io;
+
+import study.collection.MyDate3;
+
+public class Book {
+	private String name, authorName;
+	private int cost;
+	private MyDate3 dateOfPub;
+
+}

@@ -1,0 +1,17 @@
+package study.lamdaexpressions;
+
+public class PaletteUser {
+
+	public static void main(String[] args) {
+		Palette p =new Palette();
+		p.addToColorPalette("Blue");
+		p.addToColorPalette("Glue");
+		p.addToColorPalette("Rlue");
+		p.addToColorPalette("Zlue");
+		p.addToColorPalette("Clue");
+		
+		p.showAllColors();
+
+	}
+
+}

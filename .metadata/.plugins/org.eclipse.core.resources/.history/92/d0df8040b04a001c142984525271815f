@@ -1,0 +1,21 @@
+package study.lamdaexpressions;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
+
+public class StreamExample {
+
+	public static void main(String[] args) {
+		List<Integer> aList = Arrays.asList(12,22,8,19,15,34);
+//		Stream<Integer> stm =aList.stream();
+// 		stm.filter((t)->{if(t>=15) return true;else return false;}).forEach((ele)->{System.out.println(ele);});
+
+ 		
+ 		aList.stream().map(t->t+1);
+ 		aList.forEach((e)-> {System.out.println(e);});
+	}//end of main method
+
+}//end StreamExample class

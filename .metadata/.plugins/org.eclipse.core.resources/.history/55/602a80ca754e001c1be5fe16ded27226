@@ -1,0 +1,15 @@
+package study.practice;
+
+public class ProductMain {
+
+	public static void main(String[] args) {
+		Product arr[]=new Product[5];
+		arr[0] =new Product("ABC", "sdkf", 599, "XYZ");
+		arr[1] =new Product("YHN", "wer", 789, "MJU");
+		arr[2] =new Product("UJM", "yui", 369, "BGT");
+		arr[3] =new Product("RFV", "bnm", 696, "CDE");
+		arr[4] =new Product("EDC", "sdasdfkf", 7989, "ZQA");
+
+	}
+
+}

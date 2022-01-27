@@ -1,0 +1,11 @@
+package study.practice;
+
+public class MonthlyExpenseUser {
+
+	public static void main(String[] args) {
+		MonthlyExpense m =new MonthlyExpense();
+		
+
+	}
+
+}

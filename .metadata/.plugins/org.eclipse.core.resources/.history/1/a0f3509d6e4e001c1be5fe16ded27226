@@ -1,0 +1,13 @@
+package study.practice.inheretance;
+
+public class QA {
+	private int NOT;
+	public QA() {
+		// TODO Auto-generated constructor stub
+	}
+	public int getQA() {
+		return this.NOT;
+
+	}
+
+}

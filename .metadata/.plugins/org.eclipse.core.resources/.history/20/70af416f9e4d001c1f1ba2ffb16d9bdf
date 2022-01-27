@@ -1,0 +1,11 @@
+package study.shrinivas;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int []mark = {20,19,18,23};
+		Student std1 =new Student( );
+
+	}
+
+}
